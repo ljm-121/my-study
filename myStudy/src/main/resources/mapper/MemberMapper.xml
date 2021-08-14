@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.health.member.MemberMapper">
+	
+	<!-- 로그인 -->
+	<select id="login" resultType="com.health.member.Member">
+		SELECT
+			*
+		FROM
+			member
+		WHERE
+			mem_userid = #{memUserid}
+	</select>
+	
+	<insert id="joinMember">
+		<!-- 회원가입 -->
+		INSERT INTO
+			member (mem_email, mem_userid, mem_password)
+		SET
+			(#{memEmail}, #{memUserid}, #{memPassword})
+		
+	</insert>
+	
+</mapper>
