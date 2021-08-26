@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.board.BoardMapper">
+	
+	<insert id="writeBoard" parameterType="com.study.board.Board">
+		<!-- 게시판 글쓰기 -->
+		INSERT INTO board
+			(mem_id
+			,board_title
+			,board_date
+			,board_content
+			,board_use)
+		VALUES
+			(#{memId}
+			,#{boardTitle}
+			,now()
+			,#{boardContent}
+			,1)
+		
+	</insert>
+	
+</mapper>

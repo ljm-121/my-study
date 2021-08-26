@@ -11,14 +11,24 @@
 			member
 		WHERE
 			mem_userid = #{memUserid}
+		AND
+			mem_password =#{memPassword}
 	</select>
 	
-	<insert id="joinMember">
+	<insert id="joinMember" parameterType="com.study.member.form.MemberForm">
 		<!-- 회원가입 -->
-		INSERT INTO
-			member (mem_email, mem_userid, mem_password)
-		SET
-			(#{memEmail}, #{memUserid}, #{memPassword})
+		INSERT INTO member
+			(mem_userid
+			,mem_password
+			,mem_username
+			,mem_sex
+			,mem_email)
+		VALUES
+			(#{memUserid}
+			,#{memPassword}
+			,#{memUsername}
+			,#{memSex}
+			,#{memEmail})
 		
 	</insert>
 	

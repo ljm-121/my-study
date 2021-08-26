@@ -6,9 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <!-- 화면 최적화 -->
-<meta name="viewport" content="width-device-width", initial-scale="1">
-<!-- 루트 폴더에 부트스트랩을 참조하는 링크 -->
-<link rel="stylesheet" href="css/bootstrap.css">
+<%@ include file="../common/head.jsp" %>
 <title>JSP 게시판 웹 사이트</title>
 </head>
 <body>
@@ -96,13 +94,13 @@
 				</tbody>
 			</table>
 			<!-- 글쓰기 버튼 생성 -->
-			<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
+			<a href="/board/writeBoard" class="btn btn-primary pull-right">글쓰기</a>
 		</div>
 	</div>
 	<!-- 게시판 메인 페이지 영역 끝 -->
 	
 	<!-- 부트스트랩 참조 영역 -->
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script src="js/bootstrap.js"></script>
+	<script src="/js/bootstrap.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-package com.study.member;
+package com.study.board;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,12 +9,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Member {
+public class Board {
 	
+	private String boardId;
 	private String memId;
-	private String memUserid;
-	private String memPassword;
-	private String memUsername;
-	private String memSex;
-	private String memEmail;
+	private String boardTitle;
+	private String boardDate;
+	private String boardContent;
+	private String boardUse;
 }
